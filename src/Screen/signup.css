@@ -41,9 +41,11 @@
 
     border: 5px solid rgb(68, 68, 245);
     /* background-color: bisque; */
-    width: 500px;
+    /* width: 500px; */
     padding-top: 29px;
     padding-left: 30px;
+    margin-left: 2%;
+
     height: 450px;
 }
 p{
