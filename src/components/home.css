@@ -1,0 +1,10 @@
+.task{
+
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    margin-top: 40px;
+    /* background-color: yellow; */
+    height:100%;
+
+}
