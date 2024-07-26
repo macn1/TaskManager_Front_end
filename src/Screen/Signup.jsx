@@ -26,7 +26,7 @@ function Signup() {
 
     if (form.password === form.confirmPassword) {
 
-      const res = await axios.post(`${process.env.backend_url}/user/signup `,{firstName:form.firstName,lastName:form.lastName,email:form.email,password:form.password})
+      const res = await axios.post(`https://athulmkmacn.online/user/signup `,{firstName:form.firstName,lastName:form.lastName,email:form.email,password:form.password})
 
     if(res.data.status){
       navigate('/login')
