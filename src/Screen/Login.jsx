@@ -1,5 +1,6 @@
 
 
+
 import React, { useState } from 'react'
 
 import axios from 'axios'
@@ -9,6 +10,8 @@ import { useNavigate } from 'react-router-dom'
 import './login.css'
 
 function Login() {
+
+  
 
   
   const navigate =useNavigate()
@@ -31,7 +34,10 @@ function Login() {
 
     try {
 
-      const res =  await axios.post('http://localhost:4000/user/login',{email:form.email,password:form.password})
+      console.log(process.env.BC,"url");
+
+      
+      const res =  await axios.post('https://athulmkmacn.online/user/login',{email:form.email,password:form.password})
 
       console.log(res.data,"sasassa");
       if(res.data.status){

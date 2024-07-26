@@ -36,7 +36,7 @@ const Modal = ({ isOpen, onClose, title, description , getData , ediTask ,isEdit
       e.preventDefault()
       try {
   
-          const res = await axios.post('http://localhost:4000/task',{title:form.title,description:form.description}, {
+          const res = await axios.post(`${process.env.backend_url}/task`,{title:form.title,description:form.description}, {
             headers: {
               Authorization: `Bearer ${token}`,
               'Content-Type': 'application/json', // Set the content type if needed
@@ -55,7 +55,7 @@ const Modal = ({ isOpen, onClose, title, description , getData , ediTask ,isEdit
     }else{
       try {
 
-        const res = await axios.put(`http://localhost:4000/task/${form._id}`,{title:form.title,description:form.description},{
+        const res = await axios.put(`${process.env.backend_url}/task/${form._id}`,{title:form.title,description:form.description},{
           headers: {
             Authorization: `Bearer ${token}`,
             'Content-Type': 'application/json', // Set the content type if needed

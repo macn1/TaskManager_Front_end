@@ -26,7 +26,7 @@ function Signup() {
 
     if (form.password === form.confirmPassword) {
 
-      const res = await axios.post('http://localhost:4000/user/signup',{firstName:form.firstName,lastName:form.lastName,email:form.email,password:form.password})
+      const res = await axios.post(`${process.env.backend_url}/user/signup `,{firstName:form.firstName,lastName:form.lastName,email:form.email,password:form.password})
 
     if(res.data.status){
       navigate('/login')
@@ -46,12 +46,13 @@ function Signup() {
   }
   return (
     <div>
-        <div className='container1'>
+        <div className='login'>
           <div className='center'>
 
           
-        <div className='fs-2' style={{alignItems:'start'}}>
-           <h2>Signup</h2></div> 
+          
+    <div  style={{ width:'500px',display:'flex',flex:'start'}}>
+    <h2 className='fs-2'>Signup</h2> </div> 
         <div className='form'>
             <form onSubmit={handleSubmit}  >
                 <input className='input1' name='firstName'  type="text" placeholder='Firstname' value={form.firstName} onChange={changeHandler}/>

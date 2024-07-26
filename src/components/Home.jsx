@@ -42,7 +42,7 @@ function Home() {
         // console.log(token,data._id,"hello");
         try {
 
-            const res = await axios.put(`http://localhost:4000/task/${data._id}`,data,{
+            const res = await axios.put(`${process.env.backend_url}/task/${data._id}`,data,{
                 headers: {
                   'Authorization': `Bearer ${token}`,
                   'Content-Type': 'application/json', // Set the content type if needed
@@ -59,7 +59,7 @@ function Home() {
     const deleteTask = async (id) => {
 
         try {
-            const res = await axios.delete(`http://localhost:4000/task/${id}`)
+            const res = await axios.delete(`${process.env.backend_url}/task/${id}`)
             getData()
             // console.log(res, "fefe");
 
@@ -77,7 +77,7 @@ function Home() {
         try {
 
 
-            const res = await axios.patch(`http://localhost:4000/task/${index}`, { status: status })
+            const res = await axios.patch(`${process.env.backend_url}/${index}`, { status: status })
 
             getData()
 
@@ -109,7 +109,7 @@ function Home() {
         
             
 
-            const res = await axios.get('http://localhost:4000/task',{
+            const res = await axios.get(`${process.env.backend_url}/task`,{
                 headers: {
                   Authorization: `Bearer ${token}`
                 }})
