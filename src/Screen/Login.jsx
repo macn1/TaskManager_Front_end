@@ -20,6 +20,8 @@ function Login() {
   const [err,setErr]= useState('')
   const[msg,setMsg]=useState('')
 
+  const [hel,setHel]= useState('')
+
   const changeHandler =(e)=>{
 
 
@@ -48,6 +50,9 @@ function Login() {
         localStorage.setItem('token',res.data.token);
         navigate('/')
       }
+      else{
+        setHel('user doesnt exist')
+      }
       
     } catch (error) {
       console.log(error);
@@ -74,6 +79,8 @@ function Login() {
                 <button className='input1 btn btn-primary'>Login</button>
                 <p>Dont have an account ? <a href="/signup">Register</a></p>
                 <button className='input2 btn btn-primary'>Login with Google</button>
+
+                <div>{hel}</div>
 
             </form>
 

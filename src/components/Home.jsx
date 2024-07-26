@@ -77,7 +77,7 @@ function Home() {
         try {
 
 
-            const res = await axios.patch(`https://athulmkmacn.online/${index}`, { status: status })
+            const res = await axios.patch(`https://athulmkmacn.online/task/${index}`, { status: status })
 
             getData()
 
