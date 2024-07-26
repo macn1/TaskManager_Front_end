@@ -37,7 +37,11 @@ function Login() {
       console.log(process.env.BC,"url");
 
       
-      const res =  await axios.post('https://athulmkmacn.online/user/login',{email:form.email,password:form.password})
+      const res =  await axios.post('https://athulmkmacn.online/user/login',{email:form.email,password:form.password}, {
+        headers: {
+          'Content-Type': 'application/json'
+        }
+      })
 
       console.log(res.data,"sasassa");
       if(res.data.status){
