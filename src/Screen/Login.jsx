@@ -71,7 +71,7 @@ function Login() {
     <div  style={{ width:'500px',display:'flex',flex:'start'}}>
     <h2 className='fs-2'>Login</h2> </div> 
 
-    <div className='form1'  >
+    <div className='form1' style={{height:'300px'}}  >
       
             <form onSubmit={handleSubmit} >
                 <input className='input1' name='email'  type="text" placeholder='Email' value={form.email} onChange={changeHandler} />

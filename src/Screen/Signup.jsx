@@ -4,7 +4,7 @@ import axios from 'axios'
 
 import { useNavigate } from 'react-router-dom'
 
-import './signup.css'
+// import './signup.css'
 import './login.css'
 function Signup() {
   const navigate =useNavigate()
@@ -53,7 +53,7 @@ function Signup() {
           
     <div  style={{ width:'500px',display:'flex',flex:'start'}}>
     <h2 className='fs-2'>Signup</h2> </div> 
-        <div className='form'>
+        <div className='form1'>
             <form onSubmit={handleSubmit}  >
                 <input className='input1' name='firstName'  type="text" placeholder='Firstname' value={form.firstName} onChange={changeHandler}/>
                 <input className='input1' name='lastName' type="text" placeholder='Lastname'value={form.lastName} onChange={changeHandler} />
